@@ -22,9 +22,9 @@ footer {
     font-weight: 800;
 }
 
-.container {
+#container {
     width: auto;
-    height: 100vh;
+    height: auto;
     background-color: beige;
     z-index: 9999;
     margin-left: 50px;
@@ -52,7 +52,31 @@ footer {
     height: auto;
     border-radius: 30px;
     padding: 20px;
+    display: flex;
 }
+
+.text2 img {
+    border: 1px solid #a8a8a8;
+    border-radius: 4px;
+    padding: 5px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.info span {
+    color: #407f46;
+} 
 
 header nav ul {
     list-style: none;
