@@ -4,6 +4,12 @@ body {
     background-image: url(/img/ods-13-mudanca-climatica.jpg);
 }
 
+a {
+    text-decoration: none !important;
+    font-weight: 600;
+    color: #407f46;
+}
+
 footer {
     right: 0;
     bottom: 0;
@@ -12,7 +18,7 @@ footer {
     background-color: beige;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: darkgoldenrod;
+    color: #407f46;
     font-weight: 800;
 }
 
@@ -27,12 +33,24 @@ footer {
     margin-bottom: 50px;
     border-radius: 30px;
     display: flex;
+    flex-direction: column;
     justify-content: left;
     align-items: flex-start;
-    text-align: justify;  
+    text-align: justify; 
 }
 
 .text {
+    padding: 20px;
+    color: #407f46;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: auto;
+    width: auto;
+}
+
+.text2 {
+    width: auto;
+    height: auto;
+    border-radius: 30px;
     padding: 20px;
 }
 
@@ -61,7 +79,7 @@ html, body {
 
 li{
     padding: 19px 17px 19px 17px;
-    color: black;
+    color: #407f46;
 }
 
 nav {
@@ -83,9 +101,13 @@ nav {
 }
 
 .link ul:hover {
-    background-color: lightgray;
+    background-color: rgb(202, 202, 148);
     color: rgb(47, 145, 47);
     transition: 0.3s;
+}
+
+.link ul:visited{
+    color: inherit;
 }
 
 
