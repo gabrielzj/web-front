@@ -200,8 +200,14 @@ nav {
     border-radius: 5px;
 }
 
-.form button{
-    display: block;
-    margin: 0 auto;
+.buttons{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    /* margin: 0 auto; */
+}
+
+.buttons .btn-form {
+    margin: 5px;
 }
 
