@@ -145,13 +145,13 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
-    flex-direction: column;
+    flex-direction: row;
     min-height: 100vh;
 }
 
 .container-two{
-    width: fit-content;
-    height: fit-content;
+    width: 380px;
+    height: 600px;
     background-color: beige;
     z-index: 9999;
     margin-left: 50px;
@@ -166,6 +166,8 @@ nav {
     text-align: justify;
     border: #407f46 5px solid;
     padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #407f46;
 }
 
 .form {
