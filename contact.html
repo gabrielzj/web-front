@@ -28,40 +28,50 @@
     <div class="master2">
         <div class="container-two">
             <div class="form">
-                <form>
+                <form id="myform">
                     <div class="nome">
                         <label for="name">Nome:</label>
                         <input type="text" id="name" name="name" required>
                     </div>
                     <div class="email">
                         <label for="email">Email:</label>
-                        <input type="text" name="email" required>
+                        <input type="text" id="email" name="email" required>
                     </div>
                     <div class="pais">
                         <label for="country">País:</label>
-                        <input type="text"  name="country" required>
+                        <input type="text"  id="country" name="country" required>
                     </div>
                     <div class="age">
                         <label for="age">Idade:</label>
-                        <input type="number" name="age" required>
+                        <input type="number" id="age" name="age" required>
                     </div>
                     <div class="message">
                         <label for="message">Mensagem:</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
                     <div class="buttons">
-                        <button class="btn-form" tye="submit"><b>Enviar</b></button>
+                        <button id="send" class="btn-form"><b>Enviar</b></button>
                         <button class="btn-form"><b>Limpar</b></button>
                     </div>
                 </form>
             </div>
         </div>
         <div class="container-two">
-            <h2>Lista</h2>
+            <div>
+                <h2>Lista</h2>
+                <ul id="list">
+                    
+                </ul>
+                <div class="buttons">
+                    <button class="btn-form"><b>Limpar Lista</b></button>
+                    <button class="btn-form"><b>Exluir</b></button>
+                </div>
+            </div>
         </div>
     </div>
     <footer>
         Desenvolvido por Gabriel Zuin Jarduli. <br> Para fins de aprendizado apenas.
     </footer>
+    <script src="./script/enviarForm.js"></script>
 </body>
 </html>
