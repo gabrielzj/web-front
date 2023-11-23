@@ -9,8 +9,10 @@ function limpform(event) {
   let form = document.querySelector("#myform");
 
   Array.from(form.elements).forEach((input) => {
-    if (input.value != ''){
-      input.value = '';
+    if (input.value == ''){
+      window.alert("Os campos estão vazios! Preencha-os");
+    }else if(input.value != ''){
+      input.value == '';
     }
   })
 }
