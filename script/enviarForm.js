@@ -1,35 +1,38 @@
+const form = document.querySelector("#myform");
 
-let btn = document.querySelector("#send");
-
-let nome = document.querySelector("#name");
-let pass = document.querySelector("#email");
-let pais = document.querySelector("#country");
-let idade = document.querySelector("#age");
-let msg = document.querySelector("#message");
-
-
-btn.addEventListener("click", send);
+form.addEventListener("submit", send);
 
 function send(event) {
   //impede a página  recarregue 
   event.preventDefault();
 
-  let form = document.querySelector("#myform");
-  let lst = document.querySelector("#list")
-  //para cada input do form
-  Array.from(form.elements).forEach((input) => {
-    if (input.type === 'text' || input.type === 'number' || input.type === 'textarea') {
-        let valor = input.value;
-        localStorage.setItem("nome", nome.value);
-        localStorage.setItem("senha", pass.value);
-        localStorage.setItem("país", pais.value);
-        localStorage.setItem("idade", idade.value);
-        localStorage.setItem("msg", msg.value);
-        if (valor) {
-          let li = document.createElement('li');
-          li.textContent = valor;
-          lst.appendChild(li);
-        }
-      }
-  })
+  // pegar dados do input de cada campo do form
+  const nome = document.querySelector("#name")
+  const senha = document.querySelector("#email")
+  const pais = document.querySelector("#country")
+  const idade = document.querySelector("#age")
+  const msg = document.querySelector("#message")
+
+  // criar um objeto em que cada atributo é um campo do form
+  const camposForm = {
+    nome: nome.value,
+    senha: senha.value,
+    pais: pais.value,
+    idade: idade.value,
+    msg: msg.value
+  }
+
+  // para cada campo do form, adicionar um list item
+  const lista = document.querySelector("#list")
+
+  for (const campo in camposForm) {
+    const li = document.createElement('li');
+    li.textContent = camposForm[campo];
+    lista.appendChild(li);
+  }
+
+  // adicionar campos do formulario no localStorage
+  for (const campo in camposForm) {
+    localStorage.setItem(campo, camposForm[campo]);
+  }
 } 
