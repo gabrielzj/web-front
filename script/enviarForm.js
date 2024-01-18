@@ -33,6 +33,8 @@ function send(event) {
 
   // adicionar campos do formulario no localStorage
   for (const campo in camposForm) {
-    localStorage.setItem(campo, camposForm[campo]);
+    localStorage.setItem(campo, camposForm);
   }
+
+  form.reset();
 } 
